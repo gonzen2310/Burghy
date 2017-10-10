@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbackgroundresized"
+    tools:context="com.burghy.burghy.Login">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="31dp"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignParentStart="true">
+        <EditText
+            style="@style/box_style"
+            android:id="@+id/boxuser"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/username" />
+
+        <EditText
+            style="@style/box_style"
+            android:id="@+id/boxpassword"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/button_style"
+        android:text="@string/login"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/buttonguess"
+        android:layout_centerHorizontal="true"
+        android:elevation="5dp"/>
+
+    <Button
+        android:id="@+id/buttonguess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:elevation="5dp"
+        android:layout_gravity="center"
+        android:text="@string/guess"
+        android:textColor="@color/colorText"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
