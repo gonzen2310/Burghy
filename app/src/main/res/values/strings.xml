@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Burghy</string>
+    <string name="welcome">Welcome To SUNY Plattsburgh</string>
+
+    <!--NAVIGATION DRAWER TABS-->
+    <string name="app_home">Home</string>
+    <string name="app_campus">Campus</string>
+    <string name="app_maps">Maps</string>
+    <string name="app_facts">Quick Facts</string>
+    <string name="app_tips">Survival Tips</string>
+
+    <string name="app_more">More about Burghy</string>
+    <string name="app_settings">Settings</string>
+
+    <string name="nav_demo">Navigation Drawer Demo</string>
+    <string name="home_demo">Home Demo</string>
+    <string name="campus_demo">Campus Demo</string>
+    <string name="maps_demo">Maps Demo</string>
+    <string name="facts_demo">Facts Demo</string>
+    <string name="tips_demo">Tips Demo</string>
+    
+    <string name="action_settings">settings</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+</resources>
