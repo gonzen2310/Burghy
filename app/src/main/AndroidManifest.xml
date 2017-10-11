@@ -33,6 +33,14 @@
             android:name=".Maps"
             android:label="Maps" />
 
+        <activity
+            android:name=".Facts"
+            android:label="Facts" />
+
+        <activity
+            android:name=".Tips"
+            android:label="Tips" />
+
     </application>
 
 </manifest>

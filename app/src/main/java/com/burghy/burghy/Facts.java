@@ -15,12 +15,12 @@ import android.view.MenuItem;
  * Created by gonza on 10/10/2017.
  */
 
-public class Maps extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+public class Facts extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     @Override
-    protected void onCreate (Bundle savedInstanceSate) {
-        super.onCreate(savedInstanceSate);
-        setContentView(R.layout.activity_maps);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_facts);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -64,33 +64,33 @@ public class Maps extends AppCompatActivity implements NavigationView.OnNavigati
         int id = item.getItemId();
 
         if(id == R.id.home){
-            Intent searchIntent = new Intent(Maps.this, Home.class);
+            Intent searchIntent = new Intent(Facts.this, Home.class);
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
         else if(id == R.id.campus){
-            Intent searchIntent = new Intent(Maps.this, Campus.class);
+            Intent searchIntent = new Intent(Facts.this, Campus.class);
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
         else if(id == R.id.maps){
-            Intent searchIntent = new Intent(Maps.this, Maps.class);
+            Intent searchIntent = new Intent(Facts.this, Maps.class);
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
         else if(id == R.id.facts) {
-            Intent searchIntent = new Intent(Maps.this, Facts.class);
+            Intent searchIntent = new Intent(Facts.this, Facts.class);
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
         else if(id == R.id.tips) {
-            Intent searchIntent = new Intent(Maps.this, Tips.class);
+            Intent searchIntent = new Intent(Facts.this, Tips.class);
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

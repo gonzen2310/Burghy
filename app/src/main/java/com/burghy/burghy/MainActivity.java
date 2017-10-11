@@ -75,6 +75,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
+        else if(id == R.id.facts) {
+            Intent searchIntent = new Intent(MainActivity.this, Facts.class);
+            startActivity(searchIntent);
+            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+        }
+        else if(id == R.id.tips) {
+            Intent searchIntent = new Intent(MainActivity.this, Tips.class);
+            startActivity(searchIntent);
+            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

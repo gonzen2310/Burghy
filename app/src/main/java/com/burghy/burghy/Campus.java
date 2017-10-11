@@ -79,6 +79,16 @@ public class Campus extends AppCompatActivity implements NavigationView.OnNaviga
             startActivity(searchIntent);
             overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
         }
+        else if(id == R.id.facts) {
+            Intent searchIntent = new Intent(Campus.this, Facts.class);
+            startActivity(searchIntent);
+            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+        }
+        else if(id == R.id.tips) {
+            Intent searchIntent = new Intent(Campus.this, Tips.class);
+            startActivity(searchIntent);
+            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
