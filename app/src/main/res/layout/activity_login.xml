@@ -15,7 +15,8 @@
         android:padding="16dp"
         android:layout_marginBottom="31dp"
         android:layout_alignBottom="@+id/button1"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
         <EditText
             style="@style/box_style"
             android:id="@+id/boxuser"
@@ -35,10 +36,11 @@
         style="@style/button_style"
         android:text="@string/login"
         android:textColor="@color/colorText"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="11dp"
+        android:elevation="5dp"
+        android:layout_marginStart="21dp"
         android:layout_above="@+id/buttonguess"
-        android:layout_centerHorizontal="true"
-        android:elevation="5dp"/>
+        android:layout_toEndOf="@+id/signInButton" />
 
     <Button
         android:id="@+id/buttonguess"
@@ -49,9 +51,16 @@
         android:layout_gravity="center"
         android:text="@string/guess"
         android:textColor="@color/colorText"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="13dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/signInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_alignTop="@+id/button1"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
