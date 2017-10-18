@@ -7,7 +7,6 @@
     android:background="@drawable/loginbackgroundresized"
     tools:context="com.burghy.burghy.Login">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,18 +16,46 @@
         android:layout_alignBottom="@+id/button1"
         android:layout_alignParentStart="true"
         android:id="@+id/linearLayout">
-        <EditText
-            style="@style/box_style"
-            android:id="@+id/boxuser"
-            android:layout_marginBottom="20dp"
-            android:hint="@string/username" />
 
-        <EditText
-            style="@style/box_style"
-            android:id="@+id/boxpassword"
-            android:layout_marginBottom="10dp"
-            android:hint="@string/password"
-            android:inputType="textPassword"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hintText">
+
+            <EditText
+                style="@style/box_style"
+                android:id="@+id/boxuser"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/username"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorText"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/login_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hintText">
+
+            <EditText
+                style="@style/box_style"
+                android:id="@+id/boxpassword"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/password"
+                android:textColorHint="@color/colorText"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
     </LinearLayout>
 
     <Button
@@ -39,17 +66,17 @@
         android:layout_marginBottom="11dp"
         android:elevation="5dp"
         android:layout_marginStart="21dp"
-        android:layout_above="@+id/buttonguess"
+        android:layout_above="@+id/buttoncreateaccount"
         android:layout_toEndOf="@+id/signInButton" />
 
     <Button
-        android:id="@+id/buttonguess"
+        android:id="@+id/buttoncreateaccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:elevation="5dp"
         android:layout_gravity="center"
-        android:text="@string/guess"
+        android:text="@string/crateaccount"
         android:textColor="@color/colorText"
         android:layout_marginBottom="13dp"
         android:layout_alignParentBottom="true"

@@ -8,20 +8,33 @@
     android:background="@drawable/navdrawerbackgroundresized"
     android:weightSum="1">
 
+
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="0dp"
-        android:src="@drawable/avatarcircle"
-        android:layout_marginStart="10dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/welcome"/>
+        android:layout_marginBottom="15dp"
+        android:layout_weight="0.75"
+        android:contentDescription="@string/welcome"
+        android:src="@drawable/avatarcircle" />
 
     <TextView
+        android:id="@+id/nameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="15sp"
+        android:text="@string/student"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="12sp"
         android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+
 
 </LinearLayout>
