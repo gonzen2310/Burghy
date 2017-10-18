@@ -2,10 +2,12 @@
 <resources>
     <color name="colorPrimary">#F10000</color>
     <color name="colorPrimaryDark">#C30000</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFFFF</color>
 
     <color name="navdrawer">#D2120F</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorIcon">#FFFFFF</color>
     <color name="boxes">#66000000</color>
+
+    <color name="hintText">#80FFFFFF</color>
 </resources>
