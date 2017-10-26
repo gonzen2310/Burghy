@@ -30,9 +30,25 @@
     <string name="login">LOGIN</string>
     <string name="crateaccount">CREATE AN ACCOUNT</string>
 
+    <!--SIGNUP-->
+    <string name="emailplattsburgh">Plattsburgh Email</string>
+    <string name="plattsburghpassword">Password</string>
+    <string name="bannerid">Banner ID</string>
+    <string name="signup">SIGN UP</string>
+    <string name="minimum_password">Password too short, enter minimum 6 characters!</string>
+    <string name="auth_failed">Authentication failed, check your email and password or sign up</string>
+
     <!--NAVIGATION HEADER-->
     <string name="student">STUDENT</string>
     <string name="email">EMAIL</string>
     <string name="title_activity_indoor_maps">Map</string>
 
+    <!--LOG OUT-->
+    <string name="remove_user">REMOVE USER</string>
+    <string name="btn_sign_out">SIGN OUT</string>
+    <string name="email_id">Email ID</string>
+
+    <!--MapsSearchBar-->
+    <string name="search">Go</string>
+    <string name="text">Where you want to Go?</string>
 </resources>
