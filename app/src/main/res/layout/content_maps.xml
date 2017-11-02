@@ -7,6 +7,7 @@
 
 
     <fragment
+        android:layout_marginTop="60dp"
         android:id="@+id/mapFragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
@@ -20,25 +21,25 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="78dp"
         android:ems="10"
-        android:textColor="@color/boxes"
+        android:hint="@string/text"
         android:inputType="textPersonName"
-        android:hint="@string/text" />
+        android:textColor="@color/boxes" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/editText"
-        android:layout_marginEnd="11dp"
-        android:text="@string/search"
-        android:elevation="10dp"
-        android:textSize="15sp"
-        android:onClick="geoLocate"
+        android:layout_alignBaseline="@+id/editText"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_toEndOf="@+id/editText"
         android:background="@color/colorPrimary"
-        android:textColor="@color/colorAccent"/>
+        android:elevation="10dp"
+        android:onClick="geoLocate"
+        android:text="@string/search"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp" />
 
 </RelativeLayout>
