@@ -59,6 +59,7 @@ public class Maps extends AppCompatActivity implements NavigationView.OnNavigati
     private static final String TAG = Maps.class.getSimpleName();
     GoogleMap mGoogleMap;
     GoogleApiClient mGoogleApiClient;
+    private final static int LOCATION_PERMISSION_CODE = 2310;
 
     @Override
     protected void onCreate(Bundle savedInstanceSate) {
@@ -105,7 +106,7 @@ public class Maps extends AppCompatActivity implements NavigationView.OnNavigati
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        /*try {
+        try {
             // Customise the styling of the base map using a JSON object defined
             // in a raw resource file.
             boolean success = googleMap.setMapStyle(
@@ -117,27 +118,43 @@ public class Maps extends AppCompatActivity implements NavigationView.OnNavigati
             }
         } catch (Resources.NotFoundException e) {
             Log.e(TAG, "Can't find style. Error: ", e);
-        }*/
+        }
         mGoogleMap = googleMap;
 //        goToLocationZoom(44.6934, -73.467462, 15.5f);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-//                // TODO: Consider calling
-//                //    public void requestPermissions(@NonNull String[] permissions, int requestCode)
-//                // here to request the missing permissions, and then overriding
-//                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-//                //                                          int[] grantResults)
-//                // to handle the case where the user grants the permission. See the documentation
-//                // for Activity#requestPermissions for more details.
-                return;
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            mGoogleMap.setMyLocationEnabled(true);
+        } else {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_PERMISSION_CODE);
             }
         }
-        mGoogleMap.setMyLocationEnabled(true);
     }
 
-
-
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case LOCATION_PERMISSION_CODE:
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                        mGoogleMap.setMyLocationEnabled(true);
+                    }
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "Location Required", Toast.LENGTH_LONG).show();
+                    finish();
+                }
+                break;
+        }
+    }
 
     private void goToLocationZoom(double latitude, double longitude, float zoom) {
         LatLng ll = new LatLng(latitude, longitude);
